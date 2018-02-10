@@ -20,10 +20,10 @@ body {
     top: 100px;
     left: 100px;
     width: 300px;
-    height: 250px;
+    height: 240px;
     border: 1px solid #ddddcc;
     border-radius: 10px;
-    padding: 50px 15px;
+    padding: 60px 15px;
 }
 
 .container p {
@@ -40,7 +40,7 @@ body {
     padding: 11px;
     font-family: inherit;
     border-width: 0;
-    border-radius: 5px;
+    border-radius: 3px;
 }
 
 .container p:last-child {
@@ -48,4 +48,37 @@ body {
     font-size: 0.6em;
     color: white;
     margin: 330px 165px;
+}
+
+.container input[type="button"] {
+    background-color: #0033ccbb;
+    padding: 8px;
+    color: white;
+    font-size: 0.6em;
+}
+
+.container input[type="checkbox"] {
+    position: absolute;
+    display: inline;
+    width: auto;
+    top: 195px;
+    left: 40px;
+}
+
+label {
+    position: absolute;
+    font-size: 0.7em;
+    color: black;
+    top: 200px;
+    left: 60px;
+}
+
+a {
+    position: absolute;
+    font-size: 0.7em;
+    color: black;
+    text-decoration: none;
+    font-style: italic;
+    right: 40px;
+    top: 200px;
 }
