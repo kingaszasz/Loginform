@@ -41,24 +41,44 @@ var users = [{
 ];
 
 
+var belepesiKiserlet = 0;
 
 function ellenoriz() {
-    var userName = document.querySelector("#user").value;
-    var passUser = document.querySelector("#pass").value;
+    var userName;
+    var passUser;
     var belepve = false;
-    console.log(userName, passUser);
 
-    if (userName == '' || passUser == '') {
-        document.getElementById("error").innerHTML = "Meg kell adnod a felhasználóneved és jelszavad. "
-    } else {
-        for (var i in users) {
-            if (users[i].email == userName && users[i].password == passUser) {
-                document.getElementById("success").innerHTML = `Belépve ${users[i].email}`;
-                belepve = true;
+    if (belepesiKiserlet < 3) {
+        userName = document.querySelector("#user").value;
+        passUser = document.querySelector("#pass").value;
+        document.getElementById("success").innerHTML = '';
+        document.getElementById("error").innerHTML = '';
+        document.getElementById("error2").innerHTML = '';
+
+        if (userName == '' || passUser == '') {
+            document.getElementById("error").innerHTML = "Meg kell adnod a felhasználóneved és jelszavad. "
+        } else {
+            for (var i in users) {
+                if (users[i].email == userName && users[i].password == passUser) {
+                    document.getElementById("success").innerHTML = `Belépve ${users[i].email}`;
+                    belepve = true;
+                }
             }
+            if (belepve == false) {
+                document.getElementById("error2").innerHTML = `Hibás felhasználónév vagy jelszó.`
+                document.querySelector("#user").value = '';
+                document.querySelector("#pass").value = '';
+                belepesiKiserlet++
+                if (belepesiKiserlet == 3) {
+                    document.getElementById("error2").innerHTML = '';
+                    document.getElementById("error").innerHTML = "HÁromszor is elrontottad az adataidat, 24 órára kitiltottunk."
+
+                }
+            }
+
         }
-        if (belepve == false) {
-            document.getElementById("success").innerHTML = `Hibás felhasználónév vagy jelszó.`
-        }
+    } else {
+        document.getElementById("error2").innerHTML = '';
+        document.getElementById("error").innerHTML = "HÁromszor is elrontottad az adataidat, 24 órára kitiltottunk."
     }
 }

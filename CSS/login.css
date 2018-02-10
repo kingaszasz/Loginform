@@ -47,7 +47,7 @@ body {
     position: absolute;
     font-size: 0.6em;
     color: white;
-    margin: 330px 165px;
+    margin: 340px 165px;
 }
 
 .container input[type="button"] {
@@ -55,13 +55,18 @@ body {
     padding: 8px;
     color: white;
     font-size: 0.6em;
+    margin-top: 10px;
+}
+
+.container input[type="button"]:hover {
+    background-color: #1a52f8ef;
 }
 
 .container input[type="checkbox"] {
     position: absolute;
     display: inline;
     width: auto;
-    top: 195px;
+    top: 205px;
     left: 40px;
 }
 
@@ -69,7 +74,7 @@ label {
     position: absolute;
     font-size: 0.7em;
     color: black;
-    top: 200px;
+    top: 210px;
     left: 60px;
 }
 
@@ -80,5 +85,30 @@ a {
     text-decoration: none;
     font-style: italic;
     right: 40px;
-    top: 200px;
+    top: 210px;
+}
+
+p#error,
+p#error2 {
+    position: absolute;
+    top: 250px;
+    left: 145px;
+    color: red;
+    font-size: 0.8em;
+    font-weight: bolder;
+}
+
+p#error {
+    top: 250px;
+    left: 120px;
+    font-size: 0.7em;
+}
+
+p#success {
+    position: absolute;
+    top: 250px;
+    left: 120px;
+    color: #0cf333;
+    font-size: 0.8em;
+    font-weight: bolder;
 }
