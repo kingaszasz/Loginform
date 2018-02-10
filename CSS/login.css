@@ -1,0 +1,51 @@
+body {
+    margin: 20px 0%;
+    box-sizing: border-box;
+    font-family: 'Padauk', sans-serif;
+    background-color: #313131
+}
+
+.container {
+    box-sizing: border-box;
+    position: relative;
+    margin: auto;
+    width: 500px;
+    height: 500px;
+    background: linear-gradient(to top right, #33ccff 0%, #0033cc 100%)
+}
+
+#login-form {
+    box-sizing: border-box;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    width: 300px;
+    height: 250px;
+    border: 1px solid #ddddcc;
+    border-radius: 10px;
+    padding: 50px 15px;
+}
+
+.container p {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 5px 5px;
+}
+
+.container input {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    outline: 0;
+    padding: 11px;
+    font-family: inherit;
+    border-width: 0;
+    border-radius: 5px;
+}
+
+.container p:last-child {
+    position: absolute;
+    font-size: 0.6em;
+    color: white;
+    margin: 330px 165px;
+}
