@@ -42,11 +42,12 @@ var users = [{
 
 
 var belepesiKiserlet = 0;
+var belepve = false;
 
 function ellenoriz() {
     var userName;
     var passUser;
-    var belepve = false;
+
 
     if (belepesiKiserlet < 3) {
         userName = document.querySelector("#user").value;
@@ -80,5 +81,25 @@ function ellenoriz() {
     } else {
         document.getElementById("error2").innerHTML = '';
         document.getElementById("error").innerHTML = "HÁromszor is elrontottad az adataidat, 24 órára kitiltottunk."
+    }
+}
+
+function remember() {
+    var talalt = false;
+
+    if (belepve == false) {
+        var email = prompt("Kérm adja meg az e-mail címet:");
+        for (var i in users) {
+            if (users[i].email == email) {
+                alert(`Az új jelszót elküldtük a ${users[i].email} címre`);
+                talalt = true;
+            }
+        }
+        if (!talalt) {
+            alert(`Nicns ilyen regisztrált felhasználó.`);
+
+        }
+    } else {
+        alert(`Ön már belépett!`);
     }
 }

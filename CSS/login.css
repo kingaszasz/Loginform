@@ -43,7 +43,7 @@ body {
     border-radius: 3px;
 }
 
-.container p:last-child {
+.container p#copy {
     position: absolute;
     font-size: 0.6em;
     color: white;
@@ -60,6 +60,7 @@ body {
 
 .container input[type="button"]:hover {
     background-color: #1a52f8ef;
+    cursor: pointer;
 }
 
 .container input[type="checkbox"] {
@@ -78,14 +79,18 @@ label {
     left: 60px;
 }
 
-a {
+p#forgot {
     position: absolute;
     font-size: 0.7em;
     color: black;
     text-decoration: none;
     font-style: italic;
     right: 40px;
-    top: 210px;
+    top: 205px;
+}
+
+p#forgot:hover {
+    cursor: pointer;
 }
 
 p#error,
