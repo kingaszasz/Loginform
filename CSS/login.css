@@ -41,6 +41,19 @@ body {
     font-family: inherit;
     border-width: 0;
     border-radius: 3px;
+    background-position: 5px 5px;
+    background-size: 11%;
+    background-repeat: no-repeat;
+}
+
+.container input[type="text"] {
+    background-image: url('../IMG/user.png');
+    text-indent: 30px;
+}
+
+.container input[type="password"] {
+    background-image: url('../IMG/lock.png');
+    text-indent: 30px;
 }
 
 .container p#copy {
